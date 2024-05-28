@@ -4,134 +4,154 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Yum On The Go">
-  <main class="w-full h-screen">
-    <div class="w-full h-screen flex justify-center items-center gap-8">
-      <div class="rounded-full h-fit w-fit flex items-center justify-center">
+<Layout title='Yum On The Go'>
+  <main class='flex flex-col justify-center items-center'>
+    <!-- Primera sección -->
+    <div
+      class='w-full flex flex-col h-screen md:flex-row justify-center items-center gap-8 py-8'>
+      <div class='rounded-full h-auto w-auto flex items-center justify-center'>
         <Image
-          alt="Principal Image"
-          width={400}
-          height={400}
-          src="/image/ON THE GO.png"
+          alt='Principal Image'
+          width='400'
+          height='400'
+          src='/image/ON THE GO.png'
         />
       </div>
-      <div class="w-2/4 text-center flex justify-center flex-col">
-        <h2 class="text-7xl uppercase text-black font-semibold">
+      <div class='w-full md:w-2/4 text-center flex justify-center flex-col'>
+        <h2 class='text-5xl md:text-7xl uppercase text-black font-semibold'>
           Yum on the go
         </h2>
-        <span class="uppercase text-black font-light text-4xl"
-          >Snacks and cocktails</span
-        >
+        <span class='uppercase text-black font-light text-2xl md:text-4xl'>
+          Snacks and cocktails
+        </span>
       </div>
     </div>
-    <div class="w-full h-2/4 flex flex-row items-center justify-center">
-      <div class="w-3/4 h-40 flex flex-col gap-2 justify-center items-center">
-        <h2 class="uppercase text-4xl text-center">yum on the go</h2>
-        <span class="text-center text-xl w-3/4"
-          >Somos una startup de esfuerzo joven, comprometida en alcanzar la
+
+    <!-- Segunda sección -->
+    <div
+      class='w-full flex flex-col h-screen md:flex-row items-center gap-6 justify-center'>
+      <div class='w-full flex justify-center md:w-1/4 order-1 md:order-2'>
+        <Image alt='next' width='400' height='400' src='/image/foodcart.jpg' />
+      </div>
+      <div
+        class='w-full md:w-3/4 flex flex-col gap-2 justify-center items-center order-2 md:order-1 px-4'>
+        <h2
+          class='uppercase text-4xl md:text-7xl underline decoration-1 font-semibold text-center'>
+          yum on the go
+        </h2>
+        <span class='text-center md:text-center text-xl md:text-3xl'>
+          Somos una startup de esfuerzo joven, comprometida en alcanzar la
           cúspide de la gastronomía. Nuestra misión es revolucionar el mercado
           de la comida rápida y los eventos, ofreciendo carritos de comida tanto
           físicos como para eventos. Imagina un evento sin las limitaciones
           tradicionales de la comida. Nosotros nos encargamos de que eso no
-          suceda</span
-        >
-      </div>
-      <div class="w-1/4">
-        <Image alt="next" width={350} height={350} src="/image/foodcart.jpg" />
-      </div>
-    </div>
-    <div class="w-full h-2/4 flex flex-col items-center justify-center gap-3">
-      <h2 class="uppercase text-3xl text-center pt-5 w-full h-20">
-        Propuesta de valor
-      </h2>
-      <div class="flex justify-center items-start space-x-8 pt-3 pb-5">
-        <div class="w-1/5 flex flex-col justify-center items-center">
-          <div class="mb-4">
-            <Image
-              alt="Varie"
-              width={100}
-              height={100}
-              src="/image/fruits.png"
-            />
-          </div>
-          <h2 class="text-xl font-medium mb-2">Variedad y Calidad</h2>
-          <span class="text-justify">
-            Ofrecemos una amplia gama de opciones gastronómicas, desde churritos
-            crujientes hasta bocadillos gourmet, adaptándonos a los gustos y
-            necesidades de cada evento.
-          </span>
-        </div>
-
-        <div class="w-1/5 flex flex-col justify-center items-center">
-          <div class="mb-4">
-            <Image
-              alt="Comodidad"
-              width={100}
-              height={100}
-              src="/image/provision.png"
-            />
-          </div>
-          <h2 class="text-xl font-medium mb-2">Flexibilidad y Comodidad</h2>
-          <span class="text-justify">
-            Disponemos de carritos de comida móviles que pueden instalarse en
-            cualquier tipo de evento, ya sean bodas, cumpleaños, ferias o
-            eventos corporativos.
-          </span>
-        </div>
-
-        <div class="w-1/5 flex flex-col justify-center items-center">
-          <div class="mb-4">
-            <Image
-              alt="Popularidad"
-              width={100}
-              height={100}
-              src="/image/accommodation.png"
-            />
-          </div>
-          <h2 class="text-xl font-medium mb-2">Popularización y Presencia</h2>
-          <span class="text-justify">
-            Queremos que nuestros carritos de comida se conviertan en un
-            elemento esencial en cualquier evento.
-          </span>
-        </div>
-
-        <div class="w-1/5 flex flex-col justify-center items-center">
-          <div class="mb-4">
-            <Image
-              alt="Innovación"
-              width={100}
-              height={100}
-              src="/image/innovation.png"
-            />
-          </div>
-          <h2 class="text-xl font-medium mb-2">Innovación y Sostenibilidad</h2>
-          <span class="text-justify">
-            Incorporamos las últimas tendencias en gastronomía y tecnología para
-            ofrecer una experiencia moderna y eficiente.
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="flex justify-center pt-7 items-start space-x-8 h-2/4 w-full">
-      <div class="w-2/6 flex flex-col justify-center items-center">
-        <h2 class="uppercase text-5xl font-medium">Visión</h2>
-        <span class="text-justify text-xl mt-4">
-          Nuestra visión es llevar la comida callejera a un nivel superior y
-          hacer que sea una parte indispensable de cada celebración. Nos
-          dedicamos a proporcionar una solución gastronómica práctica, deliciosa
-          y memorable, asegurándonos de que nuestros clientes y sus invitados
-          disfruten al máximo.
+          suceda.
         </span>
       </div>
+    </div>
 
-      <div class="w-2/6 flex flex-col justify-center items-center">
-        <h2 class="uppercase text-5xl font-medium">Misión</h2>
-        <span class="text-justify text-xl mt-4">
-          Nuestra misión es revolucionar el mercado de la comida rápida y los
-          eventos, ofreciendo carritos de comida tanto físicos como para
-          eventos. Imagina un evento sin las limitaciones tradicionales de la
-          comida. Nosotros nos encargamos de que eso no suceda.
-        </span>
+    <!-- Tercera sección -->
+    <div class='flex flex-col justify-items-center w-full gap-28 py-8'>
+      <div class='w-full flex flex-col items-center justify-center gap-3'>
+        <h2
+          class='uppercase text-3xl underline decoration-1 md:text-3xl text-center pb-5 w-full'>
+          Propuesta de valor
+        </h2>
+        <div
+          class='flex flex-col md:flex-row justify-center items-center md:items-start gap-16'>
+          <div class='w-4/5 md:w-1/5 flex flex-col justify-center items-center'>
+            <div class='mb-4'>
+              <Image
+                alt='Varie'
+                width='100'
+                height='100'
+                src='/image/fruits.png'
+              />
+            </div>
+            <h2 class='text-xl font-medium mb-2'>Variedad y Calidad</h2>
+            <span class='text-justify'>
+              Ofrecemos una amplia gama de opciones gastronómicas, desde
+              churritos crujientes hasta bocadillos gourmet, adaptándonos a los
+              gustos y necesidades de cada evento.
+            </span>
+          </div>
+          <div class='w-4/5 md:w-1/5 flex flex-col justify-center items-center'>
+            <div class='mb-4'>
+              <Image
+                alt='Comodidad'
+                width='100'
+                height='100'
+                src='/image/provision.png'
+              />
+            </div>
+            <h2 class='text-xl font-medium mb-2'>Flexibilidad y Comodidad</h2>
+            <span class='text-justify'>
+              Disponemos de carritos de comida móviles que pueden instalarse en
+              cualquier tipo de evento, ya sean bodas, cumpleaños, ferias o
+              eventos corporativos.
+            </span>
+          </div>
+          <div class='w-4/5 md:w-1/5 flex flex-col justify-center items-center'>
+            <div class='mb-4'>
+              <Image
+                alt='Popularidad'
+                width='100'
+                height='100'
+                src='/image/accommodation.png'
+              />
+            </div>
+            <h2 class='text-xl font-medium mb-2'>Popularización y Presencia</h2>
+            <span class='text-justify'>
+              Queremos que nuestros carritos de comida se conviertan en un
+              elemento esencial en cualquier evento.
+            </span>
+          </div>
+          <div class='w-4/5 md:w-1/5 flex flex-col justify-center items-center'>
+            <div class='mb-4'>
+              <Image
+                alt='Innovación'
+                width='100'
+                height='100'
+                src='/image/innovation.png'
+              />
+            </div>
+            <h2 class='text-xl font-medium mb-2'>
+              Innovación y Sostenibilidad
+            </h2>
+            <span class='text-justify'>
+              Incorporamos las últimas tendencias en gastronomía y tecnología
+              para ofrecer una experiencia moderna y eficiente.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class='flex md:flex-row flex-col justify-center pt-7 gap-14 items-center md:items-start w-full'>
+        <div>
+          <h2
+            class='uppercase underline decoration-1 text-3xl md:text-3xl font-bold text-center pb-5 w-full'>
+            Nosotros
+          </h2>
+        </div>
+        <div class='w-3/4 md:w-2/6 flex flex-col justify-center items-center'>
+          <h2 class='uppercase text-3xl md:text-5xl font-medium'>Visión</h2>
+          <span class='text-justify text-xl mt-4'>
+            Nuestra visión es llevar la comida callejera a un nivel superior y
+            hacer que sea una parte indispensable de cada celebración. Nos
+            dedicamos a proporcionar una solución gastronómica práctica,
+            deliciosa y memorable, asegurándonos de que nuestros clientes y sus
+            invitados disfruten al máximo.
+          </span>
+        </div>
+        <div class='w-3/4 md:w-2/6 flex flex-col justify-center items-center'>
+          <h2 class='uppercase text-3xl md:text-5xl font-medium'>Misión</h2>
+          <span class='text-justify text-xl mt-4'>
+            Nuestra misión es revolucionar el mercado de la comida rápida y los
+            eventos, ofreciendo carritos de comida tanto físicos como para
+            eventos. Imagina un evento sin las limitaciones tradicionales de la
+            comida. Nosotros nos encargamos de que eso no suceda.
+          </span>
+        </div>
       </div>
     </div>
   </main>
